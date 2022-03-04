@@ -35,7 +35,7 @@ all: $(JUNIT) $(LIST)
 
 exec: all
 	@echo "---------------------- PROGRAM START -----------------------"
-	@$J $(J_FLAGS) $(MAIN_CLASS)
+	@$J $(J_FLAGS) $(OUT) $(MAIN_CLASS)
 	@echo "-------------------- PROGRAM TERMINATED --------------------"
 
 test: all
