@@ -43,7 +43,7 @@ test: all
 	$J -jar $(JUNIT) $(J_FLAGS) $(JUNIT_FLAGS)
 	@echo "---------------------- TEST TERMINATED ---------------------"
 
-$(JUNIT): $(LIB)
+$(JUNIT): | $(LIB)
 	curl -s -z $(JUNIT) \
 		-o $(JUNIT) \
 		$(JUnit.mvn)
